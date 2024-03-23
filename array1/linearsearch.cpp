@@ -9,9 +9,13 @@ int main(){
     for(int i=0;i<n;i++){
         cin>>arr[i];
     }
+    //check mark
+    bool flag=false;
     for(int i=0;i<n;i++){
         if(x==arr[i]){
-            cout<<"Present"<<endl;
+            flag=true;
         }
     }
+    if(flag==true) cout<<"Element found";
+    else cout<<"Not found";
 }
