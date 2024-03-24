@@ -15,6 +15,7 @@ void reveresepart(int i,int j,vector<int>&a){
 int main(){
     int n,k;
     cin>>n>>k;
+    if(k>n) k=k%n;
     vector<int> arr;
     for(int i=0;i<n;i++){
         int x;
