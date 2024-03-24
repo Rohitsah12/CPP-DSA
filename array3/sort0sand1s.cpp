@@ -20,8 +20,8 @@ void sort01m2(vector<int> &v){
     while(i<j){
         if(v[j]==1) j--;
         if(v[i]==0) i++;
-        if(i>j) break;
-        if(v[i]==1 && v[j]==0){
+        // if(i>j) break;
+        else  if(v[i]==1 && v[j]==0){
             v[i]=0;
             v[j]=1;
             i++;
