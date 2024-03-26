@@ -5,7 +5,7 @@ int main(){
     vector<vector<int>>v; 
     for(int i=0;i<m;i++){
         vector<int> a(i);
-        v.push_back(a);
+        v.push_back(a+1);
     }
     for(int i=0;i<m;i++){
         for(int j=0;j<m;j++){
