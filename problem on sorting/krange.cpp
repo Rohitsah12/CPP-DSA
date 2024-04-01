@@ -11,7 +11,7 @@ float min(float a,float b){
 int main(){
     int arr[]={5,3,10,3};
     int n=4;
-    for(int ele:arr){
+    for(int ele:arr){        
         cout<<ele<<" ";
     }
     cout<<endl;
