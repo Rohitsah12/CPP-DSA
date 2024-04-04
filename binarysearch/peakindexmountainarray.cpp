@@ -19,6 +19,6 @@ public:
             }
         }
         
-        return -1; // Peak not found
+        return -1; 
     }
 };
