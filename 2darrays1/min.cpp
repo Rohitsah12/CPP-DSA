@@ -9,7 +9,7 @@ int main(){
             cin>>arr[i][j];
         }
     }
-    int min=INT_MAX;
+int min=INT_MAX;
     for(int i=0;i<m;i++){
         for(int j=0;j<n;j++){
            if(min>arr[i][j]){
