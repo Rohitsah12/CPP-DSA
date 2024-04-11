@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-using namespace std;\
+using namespace std;
 void gun(){
     cout<<"Hello cw\n";
     return;    
