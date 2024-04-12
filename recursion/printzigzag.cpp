@@ -9,5 +9,5 @@ void zigzag(int n){
     cout<<n<<" ";
 }
 int main(){
-    zigzag(3);
+    zigzag(2);
 }
