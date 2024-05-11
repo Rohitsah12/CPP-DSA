@@ -1,31 +1,20 @@
 #include<bits/stdc++.h>
 using namespace std;
 class Student{
-    private:
+    public:
     string name;
     int age,roll_number;
-    string grade;
-    //Function Getter  and Setter
-    public:
-    void setname(string s){
-        name=s;
-    }
-    void setage(int a){
-        age=a;
-    }
-    void setroll_number(int r){
-        roll_number=r;
-    }
-    void setgrade(string g){
-        grade=g;
-    }
-    
+    string grade; 
 };
 int main(){
-    Student S1;
-    S1.setname("Rohit");
-    S1.setage(10);
-    S1.setroll_number(21);
-    S1.setgrade("A+");
+    Student *S=new Student;
+    (*S).name="Rohit";
+    (*S).age=10;
+    (*S).roll_number=21;
+    (*S).grade="A+";
+    cout<<S->name<<" ";
+    cout<<S->age<<" ";
+    cout<<S->roll_number<<" ";
+    cout<<S->grade<<" ";
 
 }
