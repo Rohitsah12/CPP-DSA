@@ -4,18 +4,15 @@ class Customer{
     string name;
     int *data;
     public:
-    Customer(){
-        name="Rohit";
-        data = new int;
-        *data=10;
-        cout<<"Customer is called\n";
+    Customer(string name){
+        this->name;
+        cout<<"constructor is "<<name<<endl;
     }
     //Destructor
     ~Customer(){
-        delete data;
-        cout<<"Destructor is called";
+        cout<<"destructor is"<<name<<endl;
     }
 };
 int main(){
-    Customer A1;
+    Customer A1("1"),A2("2"),A3("3");
 }
