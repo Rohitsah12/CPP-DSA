@@ -1,2 +1,1 @@
-cout<<Head->data<<endl;
-    // cout<<Head->next<<endl;
+Node *temp=Head;

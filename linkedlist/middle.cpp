@@ -10,24 +10,25 @@ class Node{
         next=NULL;
     }
 };
-CreateLinkedlist(int arr[],int index,int size,Node *prev){
-    //Base case
-    if(index==size){
-        return prev;
-    }
-    Node *temp;
-    temp=new Node(arr[index]);
-    temp->next=prev;
-    return CreateLinkedlist(arr,index+1,size,temp);
-}
+
 int main(){
     Node *Head;
     Head=NULL;
     int arr[]={2,4,6,8,10};
-    Head=CreateLinkedlist(arr,0,5,Head);
-    //Print the value
-    
+    //insert node at particular position
+    int x=3;//insert position
+    int value=30;
     Node *temp=Head;
+    x--;
+    while(x--){
+        temp=temp->next;
+    }
+    Node *temp2=new Node(value);
+    temp2->next=temp->next;
+    temp->next=temp2;
+    
+    //Print the value
+    // Node *temp=Head;
     while(temp!=NULL){
         cout<<temp->data<<" ";
         temp=temp->next;
