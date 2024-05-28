@@ -2,8 +2,7 @@ class Solution {
 public:
     vector<int> findClosestElements(vector<int>& arr, int k, int x) {
         int n = arr.size();
-        vector<int> ans(k);
-        
+        vector<int> ans(k);   
         if (x < arr[0]) {
             for (int i = 0; i < k; i++) {
                 ans[i] = arr[i];
