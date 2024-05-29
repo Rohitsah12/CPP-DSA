@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    int arr[]={1,2,3,3,4,4,4,5};
+    int arr[]={1,3,3,4,4,4,5};
     int n=8;
     int target=4;
     int low=0;
