@@ -7,5 +7,4 @@ int main(){
     cout<<v[2]<<" ";
     cout<<v[3]<<" ";
     cout<<v[4]<<" ";
-   
 }
