@@ -1,6 +1,3 @@
-from curses.ascii import isupper
-
-
 class Entry:
     def __init__(self,key,value):
         self.key=key
@@ -24,7 +21,7 @@ class HT:
     if(present) uodate the value
     else append it in data[index]'''
     
-    def insert(key,value):
+    def insert(self,key,value):
         entry=Entry(key,value)
         index=entry.hash % self.capacity
         isUpdated=False
@@ -35,7 +32,29 @@ class HT:
                 break 
         if not isUpdated:
             self.data[index].append(entry)
+            self.size+=1
 
     def remove(key):
+        index =hash(key)% self.capacity
+        for i in range(len(self.data[index])):
+            if(self.data[index][i].key==key):
+                del self.data[index][i]
+                self.size-=1
+            else:
+                print("Not present")
 
-    def get(key):
+    def get(self, key):
+        index= hash(key) % self.capacity
+        for i in range(len(self.data[index])):
+            if(self.data[index][i].key==key):
+                return self.data[index][i].value
+            else:
+                return None
+
+    def print(self):
+        for i in range(self.capacity) :
+            print("bucket:"  + str(i) + ":" )
+            for e in self.data[i]:
+                print(e,sep="->")
+ht=HT()
+ht.print()
