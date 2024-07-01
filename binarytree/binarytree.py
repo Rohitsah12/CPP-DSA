@@ -5,6 +5,7 @@ class Node:
         self.right=right
         self.parent=parent
 
+
 root=Node(1,None,None,None)
 node1=Node(2,None,None,root)
 root.left=node1
