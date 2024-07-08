@@ -29,8 +29,11 @@ class BinarySearchTree:
 
     def insert(self,data):
         self.root=self.insert(root,data)
-
+    def remove2(self,data):
+        if root==None:
+            return root
+        if data<root.data
     def remove(self,data):
-        
+        self.root=remove2(self.root,data)
 
     
