@@ -1,3 +1,8 @@
+from ast import Not
+
+from numpy import insert
+
+
 class Node:
     def __init__(self,data,left=None,right=None):
         self.data=data          # addresss of right children
@@ -8,6 +13,21 @@ class BinarySearchTree:
     def __init__(self):
         self.root=None
         self.size=0
+
     def insert(self,root,data):
+        if root==None:
+            return Node(data)
+        
+        if data==root.data:
+            return root
+        elif data<root.data:
+            root.left=insert(root.left,data)
+            return root
+        else:
+            root.right=insert(root.right,data)
+            return root
+
+    def insert(self,data):
+        self.root=self.insert(root,data)
 
     
