@@ -14,7 +14,7 @@ class BinarySearchTree:
         self.root=None
         self.size=0
 
-    def insert(self,root,data):
+    def __insert(self,root,data):
         if root==None:
             return Node(data)
         
