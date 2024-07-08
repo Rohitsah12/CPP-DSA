@@ -53,6 +53,13 @@ class BinarySearchTree:
                 temp=root.right
                 del root 
                 return temp
+            else:
+                succ=root.left #find successor
+                while(succ.right is Not None):
+                    succ=succ.right
+                    root.data=succ.data  #put succ value at root
+                    root.left = remove(root.left,succ.data)
+                    return root
             
 
             
