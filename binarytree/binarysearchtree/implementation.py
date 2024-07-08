@@ -30,4 +30,7 @@ class BinarySearchTree:
     def insert(self,data):
         self.root=self.insert(root,data)
 
+    def remove(self,data):
+        
+
     
