@@ -5,8 +5,9 @@ class Node:
         self.right=right        # address of Right children          
 
 class BinarySearchTree:
-     def __init__(self):
+    def __init__(self):
         self.root=None
         self.size=0
-    
+    def insert(self,root,data):
+
     
