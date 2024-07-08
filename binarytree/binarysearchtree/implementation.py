@@ -3,7 +3,7 @@ from logging import root
 from tempfile import tempdir
 from turtle import right
 
-from numpy import insert
+from numpy import insert, true_divide
 
 
 class Node:
@@ -59,12 +59,18 @@ class BinarySearchTree:
                     succ=succ.right
                     root.data=succ.data  #put succ value at root
                     root.left = remove(root.left,succ.data)
-                    return root
-            
-
-            
+                    return root  
 
     def remove(self,data):
         self.root=remove2(self.root,data)
 
+    def find(self,value,node=self.root):
+        if node is None:
+            return False
+        if(node.data==value):
+            return true
+        if(value<root.data):
+            return find(value,node.left)
+        else:
+            return find(value,node.right)
     
