@@ -1,5 +1,6 @@
 from ast import Not
 from logging import root
+from tempfile import tempdir
 from turtle import right
 
 from numpy import insert
@@ -40,7 +41,22 @@ class BinarySearchTree:
         else:
             root.right=remove(root.right,data)
             return right
+        if root.data==data:
+            if root.left==None and root.right==None:
+                del root
+                return None
+            if root.right==None:
+                temp=root.left
+                del root
+                return temp
+            if root.left==None:
+                temp=root.right
+                del root 
+                return temp
             
+
+            
+
     def remove(self,data):
         self.root=remove2(self.root,data)
 
