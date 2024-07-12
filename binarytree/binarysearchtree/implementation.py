@@ -57,9 +57,9 @@ class BinarySearchTree:
                 succ=root.left #find successor
                 while(succ.right is Not None):
                     succ=succ.right
-                    root.data=succ.data  #put succ value at root
-                    root.left = remove(root.left,succ.data)
-                    return root  
+                root.data=succ.data  #put succ value at root
+                root.left = remove(root.left,succ.data)
+                return root  
 
     def remove(self,data):
         self.root=remove2(self.root,data)
