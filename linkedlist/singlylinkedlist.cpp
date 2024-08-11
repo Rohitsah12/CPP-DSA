@@ -105,7 +105,7 @@ public:
 
     void deleted(int ind)
     {
-        if (ind < 0 || ind >=size)
+        if (ind < 0 || ind >= size)
         {
             cout << "Index out of bounds" << endl;
             return;
@@ -116,32 +116,38 @@ public:
             head = head->next;
             delete temp;
         }
-        else{
-            int n=0;
-            Node* curr=head;
-            while(n<ind-1){
+        else
+        {
+            int n = 0;
+            Node *curr = head;
+            while (n < ind - 1)
+            {
                 n++;
-                curr=curr->next;
+                curr = curr->next;
             }
-            if(ind==size-1){
-                Node* temp=tail;
-                tail=curr;
-                curr->next=nullptr;
+            if (ind == size - 1)
+            {
+                Node *temp = tail;
+                tail = curr;
+                curr->next = nullptr;
                 delete temp;
             }
-            else{
-                Node* temp=curr->next;
-                curr->next=temp->next;
+            else
+            {
+                Node *temp = curr->next;
+                curr->next = temp->next;
                 delete temp;
             }
         }
         size--;
     }
-    void deleteHead(){
+    void deleteHead()
+    {
         this->deleted(0);
     }
-    void deleteAtEnd(){
-        this->deleted(this->siz()-1);
+    void deleteAtEnd()
+    {
+        this->deleted(this->siz() - 1);
     }
 };
 
@@ -173,18 +179,18 @@ int main()
     sl.display();
     sl.insertAtEnd(25);
     sl.insertAtEnd(30);
-    cout<<sl.siz()<<endl;
+    cout << sl.siz() << endl;
     sl.display();
     sl.deleted(5);
     sl.display();
-    cout<<sl.siz()<<endl;
-    sl.deleted(sl.siz()-1);
+    cout << sl.siz() << endl;
+    sl.deleted(sl.siz() - 1);
     sl.display();
-    cout<<sl.siz()<<endl;
+    cout << sl.siz() << endl;
     sl.deleteHead();
     sl.display();
-    cout<<sl.siz()<<endl;
+    cout << sl.siz() << endl;
     sl.deleteAtEnd();
     sl.display();
-    cout<<sl.siz()<<endl;
+    cout << sl.siz() << endl;
 }
