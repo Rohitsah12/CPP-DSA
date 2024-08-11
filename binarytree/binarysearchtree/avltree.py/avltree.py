@@ -87,6 +87,9 @@ class AvlTree:
                 return self.__leftLeftCase(node)
             else : #Left-Right imbalance
                 return self.__leftRightCase(node)
+                
+        else:
+            return node
     
     def __leftLeftCase(self, node) :
         #right rotate to fix the Left-Left imbalance
@@ -171,4 +174,5 @@ class AvlTree:
         self.__update(node)
 
         return self.__balance(node)
+        
         
