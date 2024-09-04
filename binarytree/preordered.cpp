@@ -53,6 +53,15 @@ int level(Node* root){
     if(!root) return 1;
     return 1+max(level(root->left),level(root->right));
 }
+void nthOrderd(Node* root,int curr,int n){
+    if(!root) return;
+    if(curr==n){
+        cout<<root->data<<" ";
+        return ;
+    }
+    nthOrderd(root->left,curr+1,n);
+    nthOrderd(root->right,curr+1,n);
+}
 
 void levelOrdered(Node* root){
     int n=level(root);
